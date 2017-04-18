@@ -1,6 +1,6 @@
 html{
-    background-color:#1b1e23;
-    color:white;
+    background-color:#cceae7;
+    color:#2b2b2b;
 }
 body{
     margin:0;
@@ -29,15 +29,16 @@ ul li{
 
 }
 ul li:hover{
-    color:limegreen;
+    color:black;
     cursor:pointer;
     transition: all 1s;
     transform: scale(0.95,0.95);
 }
 .header{
     max-height:100px;
+    color:white;
     width:100%;
-    background-color:#1b1e23;
+    background-color:#009688;
     margin:0;
     padding:0;
 
@@ -154,6 +155,7 @@ ul li:hover{
 /* Cytat Main */
 .main{
     width:100%;
+    color:white;
     height:auto;
     padding-top:150px;
     padding-bottom:150px;
@@ -184,6 +186,7 @@ ul li:hover{
 .mainopis{
     width:100%;
     height:auto;
+    background-color:#66c0b7;
     padding-top:150px;
     padding-bottom:150px;
 }
@@ -243,7 +246,8 @@ ul li:hover{
 }
 .showtext1 h1{
     text-align:left;
-    color:#3b5998;
+    color:white;
+    text-shadow: 1px 1px #4d4d4d;
 }
 .showtext2 h1{
     text-align:center;
