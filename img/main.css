@@ -36,9 +36,8 @@ ul li:hover{
 }
 .header{
     max-height:100px;
-    color:white;
     width:100%;
-    background-color:#009688;
+    background-color:white;
     margin:0;
     padding:0;
 
@@ -186,7 +185,7 @@ ul li:hover{
 .mainopis{
     width:100%;
     height:auto;
-    background-color:#66c0b7;
+    background-color:#ecebeb;
     padding-top:150px;
     padding-bottom:150px;
 }
@@ -210,20 +209,20 @@ ul li:hover{
 }
 .text:hover{
     cursor:pointer;
-    color:limegreen;
+    color:#009688;
     transition: all 1s;
     transform: scale(0.9,0.9);
 }
 .texton{
     transition: all 1s;
-    color:limegreen;
+    color:#009688;
 }
 .textnormal{
     transition: all 1s;
     color:white;
 }
 .textnormal:hover{
-    color:limegreen;
+    color:#009688;
     transition: all 1s;
 }
 .showtext1{
@@ -246,16 +245,15 @@ ul li:hover{
 }
 .showtext1 h1{
     text-align:left;
-    color:white;
-    text-shadow: 1px 1px #4d4d4d;
+    color:#009688;
 }
 .showtext2 h1{
     text-align:center;
-    color:#3b5998;
+    color:#009688;
 }
 .showtext3 h1{
     text-align:right;
-    color:#3b5998;
+    color:#009688;
 }
 /* /////////////////////////////////////// */
 /* Transformacje Main */
@@ -285,7 +283,7 @@ ul li:hover{
 .contact{
     padding-top:50px;
     padding-bottom:50px;
-    background-color:#343434;
+    background-color:#35a79c;
 }
 .contact h1{
     font-size:40px;
@@ -306,20 +304,21 @@ ul li:hover{
 .fb{
     padding-top:0px;
     padding-bottom:0px;
-    background-color:#3b5998;
+    background-color:#35a79c;/*#3b5998;*/
     text-align:center;
     font-size:100px;
     transition: all 1s;
+    color:white;
 }
 .fb:hover{
-    background-color:#2a4887;
+    background-color:#009688;/*#2a4887;*/
     cursor:pointer;
 }
 
 .icon-facebook:hover{
     transition: all 1s;
-    transform: scale(0.9,0.9);
-    color:antiquewhite;
+    transform: scale(0.95,0.95);
+    color:#2a4887;
 
 
 }
@@ -335,7 +334,7 @@ ul li:hover{
     transition: all 1s;
 }
 .scrolltop:hover{
-    color:limegreen;
+    color:black;
     transition: all 1s;
 }
 .scrollshow{
@@ -351,6 +350,7 @@ ul li:hover{
 .footer{
     padding-top:30px;
     padding-bottom:30px;
+    background-color:#009688;
     font-size:20px;
     text-align:center;
 }
