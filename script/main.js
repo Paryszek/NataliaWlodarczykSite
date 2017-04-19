@@ -1,6 +1,10 @@
 $(document).ready(function() {
 	var NavY = $('.header').offset().top;
-    var stickyNav = function(){
+    var loader = function() {
+        setTimeout(function(){ $('.loading').addClass('loaderhide'); }, 2000);
+        setTimeout(function(){ $('.loading').addClass('loaderhide2'); }, 2500);
+    }
+    var stickyNav = function() {
         var ScrollY = $(window).scrollTop();
 	   if (ScrollY > NavY) {
 
@@ -97,6 +101,7 @@ $(document).ready(function() {
 			}, 1000);
         });
     };
+    loader();
     stickyNav();
     scrolltotop();
     clickicons();
