@@ -170,8 +170,8 @@ ul li:hover{
     width:100%;
     color:white;
     height:auto;
-    padding-top:150px;
-    padding-bottom:150px;
+    padding-top:200px;
+    padding-bottom:200px;
     background-image: url(main.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -309,20 +309,64 @@ ul li:hover{
     padding-bottom:50px;
     background-color:#35a79c;
 }
-.contact h1{
-    font-size:40px;
-    margin-bottom:0px;
+    .contact h1{
+        font-size:40px;
+        margin-bottom:0px;
+    }
+    .contact h2{
+        font-size:30px;
+        margin-top:0px;
+        margin-bottom:0px;
+        text-align:center;
+    }
+    .contact h3{
+        font-size:25px;
+        margin:5px;
+        text-align:center;
+    }
+    .contact form {
+        margin-left:auto; 
+        margin-right:auto; 
+        margin-top:30px; 
+        margin-bottom:30px;
+        padding:0;
+        max-width: 406px;
+    }
+.contactData {
+    text-align: center;
 }
-.contact h2{
-    font-size:30px;
-    margin-top:0px;
-    text-align:center;
+.contact input[type=text], textarea {
+    width:100%; 
+    height:25px; 
+    padding-top:5px;
+    padding-bottom:5px; 
+    margin-left:-3px;
+    margin-top:5px;
+    margin-bottom:5px; 
+    font-size:15px;
+    background-color:#ecebeb;
 }
-.contact h3{
-    font-size:25px;
-    margin:5px;
-    text-align:center;
+
+.contact textarea {
+    height: 75px;
 }
+
+.contact input[type=submit] {
+    padding:15px;
+    width:100%;
+    font-size:15px; 
+    background-color:#ecebeb; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+.contact input[type=submit]:hover {
+    background-color:white;
+    transition: all 1s;
+}
+
+
 /* /////////////////////////////////////// */
 /* FB */
 .fb{
@@ -348,7 +392,7 @@ ul li:hover{
 }
 /* /////////////////////////////////////// */
 /* ScrollTop */
-.scrolltop{
+.fixedbtn {
     position:fixed;
     bottom:5%;
     left:90%;
@@ -358,10 +402,10 @@ ul li:hover{
     display:none;
     transition: all 1s;
 }
-.scrolltop:hover{
-    color:black;
-    transition: all 1s;
-}
+    .fixedbtn:hover {
+        color:black;
+        transition: all 1s;
+    }
 .scrollshow{
     opacity:1;
     display:block;

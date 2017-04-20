@@ -8,8 +8,8 @@ $(document).ready(function() {
         var ScrollY = $(window).scrollTop();
 	   if (ScrollY > NavY) {
 
-        $('.scrolltop').addClass('scrollshow');
-        $('.scrolltop').removeClass('scrollhide');
+        $('.fixedbtn').addClass('scrollshow');
+        $('.fixedbtn').removeClass('scrollhide');
 				$('.header').addClass('sticky');
         $('.logo').addClass('logomove');
         $('.header-main-menu-left').addClass('menuleftmove');
@@ -21,8 +21,8 @@ $(document).ready(function() {
         $('.header').removeClass('stickyback');
 				$('.header-main').removeClass('header-main-back');
 	   } else {
-        $('.scrolltop').addClass('scrollhide');
-        $('.scrolltop').removeClass('scrollshow');
+        $('.fixedbtn').addClass('scrollhide');
+        $('.fixedbtn').removeClass('scrollshow');
 				$('.header').removeClass('sticky');
         $('.logo').removeClass('logomove');
         $('.logo').addClass('logoback');
