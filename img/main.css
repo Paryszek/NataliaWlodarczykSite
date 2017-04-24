@@ -145,7 +145,7 @@ ul li:hover{
 .main{
     width:100%;
     color:white;
-    height:auto;
+    min-height:100%;
     padding-top:200px;
     padding-bottom:200px;
     background-image: url(main.jpg);
@@ -269,10 +269,54 @@ ul li:hover{
 }
 /* /////////////////////////////////////// */
 /* Praca */
-.work{
+#work{
     padding-top:50px;
     padding-bottom:50px;
 }
+#gallery {
+    width:400px;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+    #gallery img {
+        margin-bottom:10px;
+        margin-right:5px;
+        width:130px;
+        height:200px;
+    }
+    #gallery img:last-child {
+        margin-right:0px;
+    }
+    #gallery img:hover {
+        cursor:pointer;
+        transition: all 1s;
+        transform: scale(0.95,0.95);
+    }
+.galleryBox {
+    position:fixed;
+    /*background-color:#ecebeb;*/
+    background: rgba(236, 235, 235, .0);
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:-1000;
+    /*opacity:0;*/
+    display:none;
+
+}
+    .galleryBox img {
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        opacity:1;
+        /*width:175px;
+        height:175px;
+        margin-top: -87.5px;
+        margin-left: -87.5px;*/
+    }
 /* /////////////////////////////////////// */
 /* FAQ */
 .faq{
@@ -316,6 +360,7 @@ ul li:hover{
 }
 .contactIconsMail {
     width:418px; 
+    margin-bottom:5px;
     margin-left:auto; 
     margin-right:auto;
 }
@@ -455,14 +500,23 @@ ul li:hover{
         margin-left: -87.5px;
     }
 
-.loaderhide {
+.hidePage {
     opacity:0;
     transition: all 0.5s;
 }
 
-.loaderhide2 {
+.hidePage2 {
     display:none;
     z-index:-1000;
+}
+.showPage2 {
+    display:block;
+    z-index:1000;
+}
+.showPage{
+    /*opacity:0.8;*/
+    background: rgba(236, 235, 235, .8);
+    transition: all 0.5s;
 }
 
 .double-bounce1, .double-bounce2 {
