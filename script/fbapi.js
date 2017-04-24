@@ -1,12 +1,6 @@
 var check = true;
 var dataImgBase;
 var galleryBox = function(e) {
-                console.log(e);
-                console.log(dataImgBase);
-                /*var boxImg = document.createElement("img");
-                $( boxImg ).appendTo( ".galleryBox" );
-                //document.getElementById("galleryBox").appendChild(boxImg);
-                boxImg.src = dataImgBase.data[e].images[0].source;*/
                 var ourBoxImg = document.getElementsByTagName("img")[1];
                 ourBoxImg.src = dataImgBase.data[e].images[0].source;
                 ourBoxImg.setAttribute( 'class', 'ourBoxImg' );
@@ -14,13 +8,21 @@ var galleryBox = function(e) {
                 var imgHeight = dataImgBase.data[e].images[0].height;
                 var w = window.innerWidth;
                 var h = window.innerHeight;
+
                 console.log("szerokosc test " + -imgWidth );
-
-                $( ".ourBoxImg" ).css('margin-left',-imgWidth/2+'px');
-                $( ".ourBoxImg" ).css('margin-top',-imgHeight/2+'px');
-                $( ".ourBoxImg" ).css('max-width',w+'px');
-                $( ".ourBoxImg" ).css('max-height',h+'px');
-
+                if(h < imgHeight) {
+                    $( ".ourBoxImg" ).css('width','auto');
+                    $( ".ourBoxImg" ).css('height',h+'px');
+                    $( ".ourBoxImg" ).css('margin-left',-imgWidth/2+'px');
+                    $( ".ourBoxImg" ).css('margin-top',-h/2+'px');
+                    console.log("test" + 1);
+                } else {
+                    $( ".ourBoxImg" ).css('max-width',w+'px');
+                    $( ".ourBoxImg" ).css('max-height',h+'px');
+                    $( ".ourBoxImg" ).css('margin-left',-imgWidth/2+'px');
+                    $( ".ourBoxImg" ).css('margin-top',(-imgHeight)/2+'px');
+                    console.log("test" + 2);
+                }
                 if(check == true) {
                   $('.galleryBox').removeClass('hidePage');
                   $('.galleryBox').removeClass('hidePage2');
@@ -34,12 +36,6 @@ var galleryBox = function(e) {
                   setTimeout(function(){ $('.galleryBox').addClass('hidePage2'); }, 1000);
                   check = true;
                 }
-                /*$( ".ourBoxImg" ).css('margin-left',ourBoxImg.width/2+'px');
-                $( ".ourBoxImg" ).css('margin-top',$( ".ourBoxImg" ).height()/2+'px');*/
-                /*margin-top: -87.5px;
-        margin-left: -87.5px;*/
-
-
 }
 
 window.fbAsyncInit = function() {
@@ -70,12 +66,9 @@ window.fbAsyncInit = function() {
             var elem = document.createElement("img");
             document.getElementById("gallery").appendChild(elem);
             elem.src = response.data[i].images[5].source;
-            //elem.onclick = function() { galleryBox(response.data[i].images[0].source); };
             elem.setAttribute('onclick','galleryBox('+i+');');
 
           }
-        /*document.getElementsByTagName("img")[1].src = response.data[1].images[1].source;
-        document.getElementsByTagName("img")[2].src = response.data[2].images[2].source;*/
       }
   }
 );
