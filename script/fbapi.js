@@ -1,5 +1,16 @@
 var check = true;
 var dataImgBase;
+var closeBox = function() {
+                  $('.galleryBox').removeClass('showPage');
+                  $('.galleryBox').removeClass('showPage2');
+                  setTimeout(function(){ 
+                      $('.galleryBox').addClass('hidePage2'); 
+                      $('.closeBox').removeClass('scrollshow');
+                      $('.closeBox').addClass('scrollhide');
+                  }, 0);
+                  setTimeout(function(){ $('.galleryBox').addClass('hidePage'); }, 500);
+                  check = true;
+}
 var galleryBox = function(e) {
                 var ourBoxImg = document.getElementsByTagName("img")[1];
                 ourBoxImg.src = dataImgBase.data[e].images[0].source;
@@ -14,6 +25,7 @@ var galleryBox = function(e) {
                     $( ".ourBoxImg" ).css('width','auto');
                     $( ".ourBoxImg" ).css('height',h+'px');
                     $( ".ourBoxImg" ).css('margin-left',-imgWidth/2+'px');
+                    console.log(-imgWidth/2);
                     $( ".ourBoxImg" ).css('margin-top',-h/2+'px');
                     console.log("test" + 1);
                 } else {
@@ -26,16 +38,17 @@ var galleryBox = function(e) {
                 if(check == true) {
                   $('.galleryBox').removeClass('hidePage');
                   $('.galleryBox').removeClass('hidePage2');
+                  setTimeout(function(){ 
+                    $('.galleryBox').addClass('showPage2');
+                    $('.closeBox').removeClass('scrollhide');
+                    $('.closeBox').addClass('scrollshow');
+                  }, 0);
                   setTimeout(function(){ $('.galleryBox').addClass('showPage'); }, 500);
-                  setTimeout(function(){ $('.galleryBox').addClass('showPage2'); }, 1000);
+
                   check = false;
-                } else {
-                  $('.galleryBox').removeClass('showPage');
-                  $('.galleryBox').removeClass('showPage2');
-                  setTimeout(function(){ $('.galleryBox').addClass('hidePage'); }, 500);
-                  setTimeout(function(){ $('.galleryBox').addClass('hidePage2'); }, 1000);
-                  check = true;
-                }
+                } 
+                  
+                
 }
 
 window.fbAsyncInit = function() {
@@ -47,9 +60,9 @@ window.fbAsyncInit = function() {
     });
     FB.AppEvents.logPageView();
     FB.api(
-  '1758384481103227/photos/uploaded?fields=album&access_token=EAACEdEose0cBAKJC97ZAhtXwfGdNhfRNguCL5ZAy4uW1dzAamj8yGJldxqlFuQbTlXQZCEKiK8mZCmZClvH0GZB50OeMlnlChkYQkvDaZBWsZBu1OEIffkSWDcFB5r53Df7K5Oj4L1SmkQukYbARSiLlspZCW2qrhrPEzdzbyVrbSMTYxKMtWwtfzrF0coRzkURQZD',
+  '1758384481103227/photos/uploaded?fields=album,images&access_token=EAAXd2GdvJQ0BACmv7HBwkBiekDu0rdTZCFIV8wzGHtnQut1UiuQ94f0wSwOYrb5lSt0ouGwT2HrE93FdLNaGy7DcgooLZAlIUDN35TLa5DmIm1PvXUxsh3FXIjJuAY7nY01T4Hq47GNDrqrN9HmTqTnGZCWb3oHDWZA28lZA7IgZDZD',
   'GET',
-  {"fields":"images"},
+  /*{"fields":"images"},*/
   function(response) {
       console.log(response);
       var albumId = "17604";
@@ -63,6 +76,7 @@ window.fbAsyncInit = function() {
             
           }
           if(flag == 0) {
+            console.log(response.data[0].album.name);
             var elem = document.createElement("img");
             document.getElementById("gallery").appendChild(elem);
             elem.src = response.data[i].images[5].source;

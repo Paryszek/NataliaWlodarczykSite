@@ -317,6 +317,21 @@ ul li:hover{
         margin-top: -87.5px;
         margin-left: -87.5px;*/
     }
+.closeBox {
+    position:fixed;
+    font-size:40px;
+    top:5%;
+    left:90%;
+    z-index:1100;
+    cursor:pointer;
+    opacity:1;
+    display:none;
+    transition: all 1s;
+}
+    .closeBox:hover {
+        color:black;
+        transition: all 1s;
+    }
 /* /////////////////////////////////////// */
 /* FAQ */
 .faq{
