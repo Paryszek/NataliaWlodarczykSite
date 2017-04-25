@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<?php
+    require_once 'mail.php';
+?>
 <html lang="pl">
 <head>
 <meta name="author" content="Michał Parysz" />
@@ -85,33 +88,37 @@
               </div>
           </div>
         <div id="work">
+            <h1>PLAKATY</h1>
             <div id="gallery"></div>
+            <hr />
+            <h1>LOGOTYPY</h1>
+            <div id="logoTypy"></div>
         </div>
         <div class="contact">
              <h3>
-                Chcesz mi zlecić <font style="color:white;">wykonanie projektu?</font>
+                Chcesz mi zlecić <font style="color:#009688;">wykonanie projektu?</font>
             </h3>
              <h3>
-                Albo może masz dla mnie inną <font style="color:white;">propozycje?</font>
+                Albo może masz dla mnie inną <font style="color:#009688;">propozycje?</font>
             </h3>
              <h3>
-                <font style="color:white;">Napisz</font> do mnie lub <font style="color:white;">zadzwoń</font> to omówimy szczegóły
+                <font style="color:#009688;">Napisz</font> do mnie lub <font style="color:#009688;">zadzwoń</font> to omówimy szczegóły
             </h3>
                 <div class="contactIconsMail">
-                    <div class="contactIcons"><i class="icon-mail-alt"></i> <font style="color:white;">natalia.wlodarczyk155@gmail.com</font> </div>
+                    <div class="contactIcons"><i class="icon-mail-alt"></i> <font style="color:#009688;">natalia.wlodarczyk155@gmail.com</font> </div>
                 </div>
                 <div class="contactIconsPhone">
-                    <div class="contactIcons"><i class="icon-phone"></i> <font style="color:white;">660-479-419</font></div>
+                    <div class="contactIcons"><i class="icon-phone"></i> <font style="color:#009688;">660-479-419</font></div>
                     <div style="clear:both"></div>
                 </div>
             <h3>
                 lub skorzystaj z formularza
             </h3>
-             <form action="">
-                <input class="contactInput" type="text" name="firstname" placeholder="Proszę podać imię" value=""><br>
-                <input class="contactInput" type="text" name="lastname" placeholder="Proszę podać nazwisko" value=""><br>
-                <input class="contactInput" type="text" name="email" placeholder="Proszę podać swój e-mail" value=""><br>
-                <textarea class="contactInput" placeholder="Proszę wprowadzić wiadomość"></textarea><br>
+             <form method="POST" action="index.php">
+                <input class="contactInput" type="text" name="imie" placeholder="Proszę podać imię" value=""><br>
+                <input class="contactInput" type="text" name="nazwisko" placeholder="Proszę podać nazwisko" value=""><br>
+                <input class="contactInput" type="text" name="kontakt" placeholder="Proszę podać swój e-mail" value=""><br>
+                <textarea class="contactInput" name="wiadomosc" placeholder="Proszę wprowadzić wiadomość"></textarea><br>
                 <input class="contactBtn" type="submit" value="Wyślij wiadomość">
             </form>
         </div>

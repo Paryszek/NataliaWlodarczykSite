@@ -49,14 +49,35 @@ window.fbAsyncInit = function() {
   'GET',
   function(response) {
       dataImgBase = response;
+      console.log(response);
+      var NUMBER_OF_IMAGES_IN_GALLERY = 0;
+      var NUMBER_OF_IMAGES_IN_LOGOTYPY = 0;
       for(var i=0; i<response.data.length;i++) {
           if(response.data[i].album.id == "1760407550900920") {
-            var elem = document.createElement("img");
+            var elem = document.createElement("div");
             document.getElementById("gallery").appendChild(elem);
-            elem.src = response.data[i].images[5].source;
+            elem.style.backgroundImage="url("+response.data[i].images[5].source+")";
+            elem.style.backgroundRepeat = "no-repeat";
+            elem.style.marginRight = "5px";
             elem.setAttribute('onclick','galleryBox('+i+');');
-            if((i+1) % 3 === 0) {
-              var clearBoth = document.createElement("div");
+            NUMBER_OF_IMAGES_IN_GALLERY++;
+            if(NUMBER_OF_IMAGES_IN_GALLERY % 3 === 0) {
+              elem.style.marginRight = "0px";
+              var clearBoth = document.createElement("span");
+              document.getElementById("gallery").appendChild(clearBoth);
+              clearBoth.style.clear = "both";
+            }
+          } else if(response.data[i].album.id == "1762688414006167") {
+            var elem = document.createElement("div");
+            document.getElementById("logoTypy").appendChild(elem);
+            elem.style.backgroundImage="url("+response.data[i].images[5].source+")";
+            elem.style.backgroundRepeat = "no-repeat";
+            elem.style.marginRight = "5px";
+            elem.setAttribute('onclick','galleryBox('+i+');');
+            NUMBER_OF_IMAGES_IN_LOGOTYPY++;
+            if(NUMBER_OF_IMAGES_IN_LOGOTYPY % 3 === 0) {
+              elem.style.marginRight = "0px";
+              var clearBoth = document.createElement("span");
               document.getElementById("gallery").appendChild(clearBoth);
               clearBoth.style.clear = "both";
             }

@@ -19,6 +19,13 @@ h1{
     text-align:center;
     letter-spacing: 1px;
 }
+hr {
+    margin-top:20px;
+    margin-bottom:30px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
 ul{
     padding:0;
     margin:0;
@@ -272,25 +279,62 @@ ul li:hover{
 #work{
     padding-top:50px;
     padding-bottom:50px;
+    /*background-color:#35a79c;*/
+    background-color:#009688;
+
 }
+
+#work h1 {
+    color:white;
+    text-align:center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 35px;
+    padding-bottom:15px;
+}
+
 #gallery {
     width:400px;
     height:auto;
     margin-left:auto;
     margin-right:auto;
+    overflow: auto;
 
 }
-    #gallery img {
+    #gallery div {
+        display:block;
+        margin-bottom:10px;
+        width:130px;
+        height:130px;
+        border-radius:50%;
+        float:left;
+    }
+
+    #gallery div:hover {
+        cursor:pointer;
+        transition: all 1s;
+        transform: scale(0.95,0.95);
+    }
+#logoTypy {
+    width:400px;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    overflow: auto;
+}
+    #logoTypy div {
+        display:block;
         margin-bottom:10px;
         margin-right:5px;
         width:130px;
-        height:200px;
+        height:130px;
+        border-radius:50%;
+        float:left;
     }
-    #gallery img:nth-child(3n) {
+    #logoTypy div:nth-child(3n+1) {
         margin-right:0px;
     }
-
-    #gallery img:hover {
+    #logoTypy div:hover {
         cursor:pointer;
         transition: all 1s;
         transform: scale(0.95,0.95);
@@ -312,6 +356,7 @@ ul li:hover{
         top: 50%;
         opacity:1;
     }
+
 .closeBox {
     position:fixed;
     font-size:40px;
@@ -338,6 +383,7 @@ ul li:hover{
     display:none;
     z-index:-1000;
 }
+
 /* /////////////////////////////////////// */
 /* FAQ */
 .faq{
@@ -348,7 +394,7 @@ ul li:hover{
 .contact{
     padding-top:50px;
     padding-bottom:50px;
-    background-color:#35a79c;
+    background-color:#ecebeb;
 }
     .contact h1{
         font-size:40px;
@@ -390,7 +436,12 @@ ul li:hover{
     margin-left:auto; 
     margin-right:auto;
 }
-
+input::placeholder {
+    color: white;
+}
+textarea::placeholder {
+    color: white;
+}
 .contact input[type=text], textarea {
     width:100%; 
     height:25px; 
@@ -400,7 +451,8 @@ ul li:hover{
     margin-top:5px;
     margin-bottom:5px; 
     font-size:15px;
-    background-color:#ecebeb;
+    color:white;
+    background-color:#009688;
 }
 
 .contact textarea {
@@ -411,15 +463,16 @@ ul li:hover{
     padding:15px;
     width:100%;
     font-size:15px; 
-    background-color:#ecebeb; 
+    color:white;
+    background-color:#009688; 
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
 }
 .contact input[type=submit]:hover {
-    background-color:white;
-    transition: all 1s;
+    background-color:#11a799;
+    transition: all 0.5s;
 }
 
 
@@ -440,9 +493,8 @@ ul li:hover{
 }
 
 .icon-facebook:hover{
-    transition: all 1s;
-    transform: scale(0.95,0.95);
-    color:#2a4887;
+    transition: all 0.5s;
+    transform: scale(0.90,0.90);
 
 
 }
