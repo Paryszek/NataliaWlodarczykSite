@@ -4,8 +4,14 @@
 ?>
 <html lang="pl">
 <head>
+<meta name="title" content="Natalia Włodarczyk - Portfolio" />
+<meta name="robots" content="index, follow">
+<link rel="shortcut icon" href="img/favicon.ico">
+<meta name="description" content="Nazywam się Natalia Włodarczyk, jestem grafikiem freelancerem. Rysowanie od zawsze było moją pasją, będąc dzieckiem wszystkie pomysły przelewałam na kartkę. Kilka lat temu postanowiłam to zmienić i wszystkie swoje projekty przelać do komputera, tak właśnie grafika komputerowa stała się tym co chciałabym robić.  Ciągle staram się zgłębiać tajniki grafiki komputerowej." />
+<meta name="keywords" content="natalia,wlodarczyk,designer,projektant,grafik,łódź,województwo łódzkie, koluszki, gałkówek, portfolio" />
 <meta name="author" content="Michał Parysz" />
 <meta charset="utf-8" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <link href='https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="img/nw.css">
 <link rel="stylesheet" type="text/css" href="img/main.css">
@@ -131,7 +137,7 @@
             <i class="icon-up-open" style="font-size:50px;"></i>
         </div>
         <div class="footer">
-               2017 © <font style="color:white;">Natalia Włodarczyk</font>. Wszelkie prawa zastrzeżone.
+               2017 © <font style="color:white;">Natalia Włodarczyk</font>. Wszelkie prawa zastrzeżone. Realizacja <font style="color:white;">Michał Parysz</font>
         </div>
     </div>
 </body>
