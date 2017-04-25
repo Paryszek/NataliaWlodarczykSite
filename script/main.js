@@ -2,8 +2,8 @@ $(document).ready(function() {
 	var NavY = $('.header').offset().top;
     var what;
     var loader = function() {
-        setTimeout(function(){ $('.loading').addClass('hidePage'); }, 2000);
-        setTimeout(function(){ $('.loading').addClass('hidePage2'); }, 2500);
+        setTimeout(function(){ $('.loading').addClass('hideLoader'); }, 2000);
+        setTimeout(function(){ $('.loading').addClass('hideLoader2'); }, 2500);
     }
     var stickyNav = function() {
         var ScrollY = $(window).scrollTop();
