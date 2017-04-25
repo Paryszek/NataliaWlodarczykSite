@@ -17,7 +17,7 @@
         <div class="header">
             <div class="header-main">
                 <div class="logo">
-                    <a href="http://localhost/www/nataliawlodarczyk/">
+                    <a href="index.php">
                         <img src="img/nw.png" />
                     </a>
                 </div>
