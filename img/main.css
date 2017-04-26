@@ -40,12 +40,20 @@ ul li{
 
 }
 ul li:hover{
-    color:black;
+    color:#009688;
     cursor:pointer;
     transition: all 1s;
     transform: scale(0.95,0.95);
 }
-
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
 .header {
     max-height:100px;
     width:100%;
