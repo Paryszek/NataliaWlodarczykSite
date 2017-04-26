@@ -24,15 +24,15 @@
             <div class="header-main">
                 <div class="logo">
                     <a href="index.php">
-                        <img src="img/nw.png" />
+                        <img class="noselect"  onClick=”return true” src="img/nw.png" />
                     </a>
                 </div>
                 <div class="header-main-menu">
                     <ul>
-                        <li class="scrolltop">Start</li>
-                        <li class="scrollAbout">O mnie</li>
-                        <li class="scrollWork">Portfolio</li>
-                        <li class="scrollContact">Kontakt</li>
+                        <li class="scrolltop noselect" onClick=”return true”>Start</li>
+                        <li class="scrollAbout noselect" onClick=”return true”>O mnie</li>
+                        <li class="scrollWork noselect" onClick=”return true”>Portfolio</li>
+                        <li class="scrollContact noselect" onClick=”return true”>Kontakt</li>
                     </ul>
 
                 </div>
