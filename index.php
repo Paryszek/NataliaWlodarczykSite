@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
 <?php
     require_once 'mail.php';
 ?>
+<!DOCTYPE HTML>
 <html lang="pl">
 <head>
 <meta name="title" content="Natalia Włodarczyk - Portfolio" />
