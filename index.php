@@ -18,7 +18,7 @@
 <title></title>
 </head>
 <body>
-    <script type="text/javascript" src="script/fbapi.js"></script>
+    <script type="text/javascript" src="script/fbApi.js"></script>
     <div class="container">
         <div class="header">
             <div class="header-main">
