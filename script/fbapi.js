@@ -56,7 +56,8 @@ window.fbAsyncInit = function() {
           if(response.data[i].album.id == "1760407550900920") {
             var elem = document.createElement("div");
             document.getElementById("gallery").appendChild(elem);
-            elem.style.backgroundImage="url("+response.data[i].images[5].source+")";
+            var length = response.data[i].images.length;
+            elem.style.backgroundImage="url("+response.data[i].images[length-1].source+")";
             elem.style.backgroundRepeat = "no-repeat";
             elem.style.marginRight = "5px";
             elem.setAttribute('onclick','galleryBox('+i+');');
@@ -70,7 +71,8 @@ window.fbAsyncInit = function() {
           } else if(response.data[i].album.id == "1762688414006167") {
             var elem = document.createElement("div");
             document.getElementById("logoTypy").appendChild(elem);
-            elem.style.backgroundImage="url("+response.data[i].images[5].source+")";
+            var length = response.data[i].images.length;
+            elem.style.backgroundImage="url("+response.data[i].images[length-1].source+")";
             elem.style.backgroundRepeat = "no-repeat";
             elem.style.marginRight = "5px";
             elem.setAttribute('onclick','galleryBox('+i+');');
