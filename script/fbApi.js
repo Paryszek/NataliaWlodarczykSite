@@ -52,6 +52,7 @@ window.fbAsyncInit = function() {
       console.log(response);
       var NUMBER_OF_IMAGES_IN_GALLERY = 0;
       for(var i=0; i<response.data.length;i++) {
+        if((response.data[i].album.id != "1772774519664223") && (response.data[i].album.id != "1758389271102748")) {
           var elem = document.createElement("div");
           document.getElementById("gallery").appendChild(elem);
           var length = response.data[i].images.length;
@@ -67,6 +68,7 @@ window.fbAsyncInit = function() {
             document.getElementById("gallery").appendChild(clearBoth);
             clearBoth.style.clear = "both";
           }
+        }
       }
   }
 );
