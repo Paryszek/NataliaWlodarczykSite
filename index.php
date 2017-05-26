@@ -94,11 +94,10 @@
               </div>
           </div>
         <div id="work">
-            <h1>PLAKATY</h1>
+            <h1>PORTFOLIO</h1>
+            <hr />
             <div id="gallery"></div>
             <hr />
-            <h1>LOGOTYPY</h1>
-            <div id="logoTypy"></div>
         </div>
         <div class="contact">
              <h3>

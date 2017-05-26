@@ -45,44 +45,27 @@ window.fbAsyncInit = function() {
     });
     FB.AppEvents.logPageView();
     FB.api(
-  '1758384481103227/photos/uploaded?fields=album,images&access_token=EAAXd2GdvJQ0BACmv7HBwkBiekDu0rdTZCFIV8wzGHtnQut1UiuQ94f0wSwOYrb5lSt0ouGwT2HrE93FdLNaGy7DcgooLZAlIUDN35TLa5DmIm1PvXUxsh3FXIjJuAY7nY01T4Hq47GNDrqrN9HmTqTnGZCWb3oHDWZA28lZA7IgZDZD',
+  '1758384481103227/photos/uploaded?fields=album,images&access_token=EAAXd2GdvJQ0BAJozt0MtDNFVZCExwk9F18Ox8fVWlZANHSCRLZCIRITvd33C1pXrGoLBAAvGwne9izjkpAMQqsQUL3ZAeQlljmAWKERJzW3D9UgVuDMP4mXsHxy610qqOcEqQm95OgrOQU5JJuqsG8DRJREMPj9VDw0CBC7WHwZDZD',
   'GET',
   function(response) {
       dataImgBase = response;
       console.log(response);
       var NUMBER_OF_IMAGES_IN_GALLERY = 0;
-      var NUMBER_OF_IMAGES_IN_LOGOTYPY = 0;
       for(var i=0; i<response.data.length;i++) {
-          if(response.data[i].album.id == "1760407550900920") {
-            var elem = document.createElement("div");
-            document.getElementById("gallery").appendChild(elem);
-            var length = response.data[i].images.length;
-            elem.style.backgroundImage="url("+response.data[i].images[length-1].source+")";
-            elem.style.backgroundRepeat = "no-repeat";
-            elem.style.marginRight = "5px";
-            elem.setAttribute('onclick','galleryBox('+i+');');
-            NUMBER_OF_IMAGES_IN_GALLERY++;
-            if(NUMBER_OF_IMAGES_IN_GALLERY % 3 === 0) {
-              elem.style.marginRight = "0px";
-              var clearBoth = document.createElement("span");
-              document.getElementById("gallery").appendChild(clearBoth);
-              clearBoth.style.clear = "both";
-            }
-          } else if(response.data[i].album.id == "1762688414006167") {
-            var elem = document.createElement("div");
-            document.getElementById("logoTypy").appendChild(elem);
-            var length = response.data[i].images.length;
-            elem.style.backgroundImage="url("+response.data[i].images[length-1].source+")";
-            elem.style.backgroundRepeat = "no-repeat";
-            elem.style.marginRight = "5px";
-            elem.setAttribute('onclick','galleryBox('+i+');');
-            NUMBER_OF_IMAGES_IN_LOGOTYPY++;
-            if(NUMBER_OF_IMAGES_IN_LOGOTYPY % 3 === 0) {
-              elem.style.marginRight = "0px";
-              var clearBoth = document.createElement("span");
-              document.getElementById("gallery").appendChild(clearBoth);
-              clearBoth.style.clear = "both";
-            }
+          var elem = document.createElement("div");
+          document.getElementById("gallery").appendChild(elem);
+          var length = response.data[i].images.length;
+          elem.style.backgroundImage="url("+response.data[i].images[length-1].source+")";
+          elem.style.backgroundRepeat = "no-repeat";
+          elem.style.backgroundPosition = "center center";
+          elem.style.marginRight = "5px";
+          elem.setAttribute('onclick','galleryBox('+i+');');
+          NUMBER_OF_IMAGES_IN_GALLERY++;
+          if(NUMBER_OF_IMAGES_IN_GALLERY % 3 === 0) {
+            elem.style.marginRight = "0px";
+            var clearBoth = document.createElement("span");
+            document.getElementById("gallery").appendChild(clearBoth);
+            clearBoth.style.clear = "both";
           }
       }
   }
