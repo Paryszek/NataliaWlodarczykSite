@@ -360,8 +360,11 @@ ul li:hover{
 }
     .galleryBox img {
         position:absolute;
+        height:100%;
+        width:auto;
         left: 50%;
         top: 50%;
+        transform: translate(-50%,-50%);
         opacity:1;
     }
 

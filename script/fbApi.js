@@ -12,21 +12,6 @@ var galleryBox = function(e) {
   var ourBoxImg = document.getElementsByTagName("img")[1];
   ourBoxImg.src = dataImgBase.data[e].images[0].source;
   ourBoxImg.setAttribute( 'class', 'ourBoxImg' );
-  var imgWidth = dataImgBase.data[e].images[0].width;
-  var imgHeight = dataImgBase.data[e].images[0].height;
-  var w = window.innerWidth;
-  var h = window.innerHeight;
-  if(h < imgHeight) {
-      $( ".ourBoxImg" ).css('width','auto');
-      $( ".ourBoxImg" ).css('height',h+'px');
-      $( ".ourBoxImg" ).css('margin-left',-imgWidth/2+'px');
-      $( ".ourBoxImg" ).css('margin-top',-h/2+'px');
-  } else {
-      $( ".ourBoxImg" ).css('max-width',w+'px');
-      $( ".ourBoxImg" ).css('max-height',h+'px');
-      $( ".ourBoxImg" ).css('margin-left',-imgWidth/2+'px');
-      $( ".ourBoxImg" ).css('margin-top',(-imgHeight)/2+'px');
-  }
   if(isActive == false) {
     $('.galleryBox').removeClass('hideBox');
     $('.galleryBox').addClass('showBox');
