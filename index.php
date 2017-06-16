@@ -14,11 +14,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <link href='https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="img/nw.css">
-<link rel="stylesheet" type="text/css" href="img/main.css">
+<link rel="stylesheet" type="text/css" href="img/main.css?5">
 <title></title>
 </head>
 <body>
-    <script type="text/javascript" src="script/fbApi.js?2"></script>
+    <script type="text/javascript" src="script/fbApi.js?7"></script>
     <div class="container">
         <div class="header">
             <div class="header-main">
