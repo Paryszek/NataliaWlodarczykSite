@@ -2,7 +2,7 @@ var isActive = false;
 var dataImgBase;
 var closeBox = function() {
   $('.galleryBox').removeClass('showBox');
-  $('.galleryBox').addClass('hideBox'); 
+  $('.galleryBox').addClass('hideBox');
   $('.closeBox').removeClass('scrollshow');
   $('.closeBox').addClass('scrollhide');
   isActive = false;
@@ -33,7 +33,7 @@ var galleryBox = function(e) {
     $('.closeBox').removeClass('scrollhide');
     $('.closeBox').addClass('scrollshow');
     isActive = true;
-  }                              
+  }
 }
 
 window.fbAsyncInit = function() {
@@ -81,5 +81,3 @@ window.fbAsyncInit = function() {
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-
-
