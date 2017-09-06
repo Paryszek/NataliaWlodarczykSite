@@ -89,7 +89,7 @@
                   </div>
                 <div class="showtext3">
                     <h1>UMIEJĘTNOŚCI</h1>
-                    Grafiki uczę się na Politechnice Łódzkiej, kierunek Wzornictwo, specjalizacja Komunikacja Wizualna. W swojej pracy wykorzystuję głównie takie programy jak Adobe Illustrator oraz Adobe Photoshop. Szkolę się również z Adobe Indesign i Adobe Flash. Staram się, aby prace które wychodzą spod mojej „myszki”  były niebanalne i  starannie wykonane.
+                    Grafiki uczę się na Politechnice Łódzkiej, kierunek Wzornictwo, specjalizacja Komunikacja Wizualna. W swojej pracy wykorzystuję głównie takie programy jak Adobe Illustrator oraz Adobe Photoshop. Szkolę się również z Adobe Indesign i Adobe Flash. Staram się, aby prace które wychodzą spod mojej ręki były niebanalne i  starannie wykonane.
                   </div>
               </div>
           </div>
